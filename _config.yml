@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "AIX-fall-2023"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+subtitle                 : "I am groot"
+name                     : "이우섭, 이한결, 오준혁, 최정웅"
 description              : "An amazing website."
 url                      : "https://WhenIwas20.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
