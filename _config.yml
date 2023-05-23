@@ -104,9 +104,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "이우섭, 이한결, 오준혁, 최정웅"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "We are the **best** team in HYU."
   location         : "Somewhere"
   email            :
   links:
