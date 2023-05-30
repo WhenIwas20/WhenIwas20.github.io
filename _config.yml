@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "AIX-fall-project"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "오준혁, 이한결, 이우섭, 최정웅"
+name                     : "오준혁 이한결 이우섭 최정웅"
 description              : "2023년 1학기 AIX 딥러닝 과목의 최종 과제를 위해 만들어진 사이트"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
