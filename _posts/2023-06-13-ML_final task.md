@@ -15,7 +15,7 @@ author_profile: false
 오준혁, 기계공학부, dhwnsgurm@naver.com \
 이한결, 경영학부,  hglee412@gmail.com \
 이우섭, 용합전자공학부, lws011106@hanyang.ac.kr \
-최정웅, 건설환경공학과, jungwoong.choi17@gmail.com 
+최정웅, 건설환경공학과, jungwoong.choi17@gmail.com <br/><br/>
 
 
 # 1. Proposal (option A)
@@ -29,7 +29,7 @@ author_profile: false
 ![Alt text](https://github.com/WhenIwas20/WhenIwas20.github.io/assets/132420091/04fc4fc7-8470-4651-af0d-9a7159e972d6)  
 
 
-  &nbsp; 실제 순위와 비교해보면 정답률은 6.67% (15개 순위 중 하나의 순위만 맞춤)임을 확인 할 수 있다. 이러한 자료들을 통해 현재 사용하고 있는 지표는 정확한 예측으로 이어지지 않는다는 것을 확인할 수 있고, 그렇기에 다양한 변수를 살펴보며 순위를 정확하게 예측할 수 있는 지표를 만드는 것을 목표로 하여 프로젝트를 진행하였다. 
+  &nbsp; 실제 순위와 비교해보면 정답률은 6.67% (15개 순위 중 하나의 순위만 맞춤)임을 확인 할 수 있다. 이러한 자료들을 통해 현재 사용하고 있는 지표는 정확한 예측으로 이어지지 않는다는 것을 확인할 수 있고, 그렇기에 다양한 변수를 살펴보며 순위를 정확하게 예측할 수 있는 지표를 만드는 것을 목표로 하여 프로젝트를 진행하였다. <br/><br/>
 
 
 # 2. Datesets(nba 팀들의 승률 분석)
