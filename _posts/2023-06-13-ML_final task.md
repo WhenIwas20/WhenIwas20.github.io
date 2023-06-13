@@ -33,8 +33,7 @@ author_profile: false
 
 
 # 2. Datesets(nba 팀들의 승률 분석)
-## 첫번째 변수 설정 
-## 실패 원인 분석 
+###  변수 설정 
 
 <head>
   <style>
@@ -804,3 +803,22 @@ dtype: float64
 
 ```python
 ```
+
+# 3. Methodology
+
+# 4. Evaluation & Analysis
+
+# 5. Conclusion
+## 성공(실패) 이유
+
+# 6. Related Work 
+## 경의대학교 연구, 포제션 개념(possession concept)
+ &nbsp;  포제션은 소유라는 뜻으로 직역된다. 이 개념이 스포트에서는 볼을 소유한 시간, 다시 말해 공격할 기회를 의미하고 승패를 결정하는데 관련이 있는 변수 중 하나로 연구되고 있다. 경희대학교에서는 한국의 농구 기록 관련 연구에서 다뤄지지 않았던 포제션의 개념을 적용하여 한국남자프로농구의 승률을 예측하는 연구를 진행하였다. 한국남자프로농구 1997-1998시즌부터 2016-2017시즌의 자료를 대상으로 선정, 분석하여 1차 자료 수집으로 얻은 각 팀의 기록에 NBA에서 사용하는 포제션 산출 공식을 적용하여 팀별 포제션당 팀 평균기록을 산출하였다. 이러한 데이터를 바탕으로 상관분석, 다중회귀분석, Fisher의 Z 변환 및 단계적 다중회귀분석을 실시하여 포제션당 팀 평균기록은 경기당 팀 평균기록보다 팀 승률에 대한 설명력이 더 크다는 것과 포제션당 팀 평균기록으로 팀 승률을 예측했을 때, 수비 리바운드, 2점슛 성공률, 스틸, 3점슛 성공률, 자유투시도, 턴오버, 공격 리바운드, 블록슛, 자유투 성공률, 어시스트 순으로 영향을 미치는 것으로 나타났다는 유의미한 결과를 얻었다. 
+
+
+## 참고자료
+https://www.boston.com/sports/boston-celtics/2023/05/20/celtics-heat-stats-odds-probability-espn-bpi-65-percent-game-2/?amp=1
+https://n.news.naver.com/sports/basketball/article/425/0000140467
+https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002330790
+https://m.riss.kr/search/detail/ssoSkipDetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=830f162886a6f9c7ffe0bdc3ef48d419
+
