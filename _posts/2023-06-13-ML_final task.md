@@ -7,20 +7,16 @@ toc: true
 author_profile: false
 ---
 
-# 0. 유튜브 
+# 0. 사전 설명 
+## -1. 유튜브 영상 
 이 블로그에 대한 내용이 설명된 유튜브 링크: 
-<br/>
-  
-  
 
-# 멤버들 
+## -2. 멤버들 
 오준혁, 기계공학부, dhwnsgurm@naver.com \
 이한결, 경영학부,  hglee412@gmail.com \
 이우섭, 용합전자공학부, lws011106@hanyang.ac.kr \
 최정웅, 건설환경공학과, jungwoong.choi17@gmail.com 
-<br/>
-  
-  
+
 
 # 1. Proposal (option A)
 ## 많은 스포츠들 중 농구를 선택한 이유 
