@@ -809,7 +809,7 @@ dtype: float64
 
 
 # 4. Conclusion
-## 성공(실패) 이유
+## 
 
 # 5. Related Work 
 ## 경의대학교 연구, 포제션 개념(possession concept)
@@ -817,6 +817,7 @@ dtype: float64
 
 
 ## 참고자료
+https://www.kaggle.com/datasets/wyattowalsh/basketball
 https://www.boston.com/sports/boston-celtics/2023/05/20/celtics-heat-stats-odds-probability-espn-bpi-65-percent-game-2/?amp=1
 https://n.news.naver.com/sports/basketball/article/425/0000140467
 https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002330790
