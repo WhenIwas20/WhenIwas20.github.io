@@ -18,7 +18,7 @@ author_profile: false
 최정웅, 건설환경공학과, jungwoong.choi17@gmail.com <br/><br/>
 
 
-# 1. Proposal (option A)
+# 1.  (option A)
 ## -1. 많은 스포츠들 중 농구를 선택한 이유 (다양한 변수, 확실하지 않은 지표)
  &nbsp; 세상에는 축구, 농구, 야구, 배구 등 다양한 스포츠가 존재한다. 그리고 이러한 스포츠들은 각각의 방식, 지표를 통해 경기의 승부나 시즌의 순위 등을 예측한다. 여기서 농구는 다른 종목들에 비해 다양한 변수를 가지고 있다. 농구 경기의 승패를 가르는 변수에는 쿼터당 점수, 반칙의 갯수, 연승부터 시작해서 경기장의 상태, 각 선수들의 지표까지 존재하기 때문이다. 심지어 5명이 뛰는 경기이기에 선수 한명 한명의 컨디션 또한 중요한 변수로 작용하게 된다. 이렇게 다양한 변수가 있지만, 다른 스포츠에 비해 확실한 지표가 존재하진 않는다. 예를들어 축구에서는 승률, 점유율, 각 선수들의 활동영역 등 대표적으로 중요시하는 지표들이 존재한다. 반면 농구는 딱 떠오르는 대표적인 지표가 존재하지 않고, 다양한 변수로 인해 승패를 예측하기 어렵기에 AI+X딥러닝 프로젝트에 적합하다고 생각 했다. 지표를 학습하고 테스트 하는 데이터는 세계적인 농구 리그인 NBA (National Basketball Association)의 데이터를 사용할 것이다. 
  
@@ -32,7 +32,7 @@ author_profile: false
   &nbsp; 실제 순위와 비교해보면 정답률은 6.67% (15개 순위 중 하나의 순위만 맞춤)임을 확인 할 수 있다. 이러한 자료들을 통해 현재 사용하고 있는 지표는 정확한 예측으로 이어지지 않는다는 것을 확인할 수 있고, 그렇기에 다양한 변수를 살펴보며 순위를 정확하게 예측할 수 있는 지표를 만드는 것을 목표로 하여 프로젝트를 진행하였다. <br/><br/>
 
 
-# 2. Datesets(nba 팀들의 승률 분석)
+# 2. 데이터 셋들(nba 팀들의 승률 분석)
 ### 사용한 분석 기법
 
 ### 다양한 변수들
@@ -788,18 +788,21 @@ dtype: float64
 ```python
 ```
 
-# 3. Conclusion
+# 3. 결론
 ## 
 
-# 4. Related Work 
+# 4. 관련 연구
 ## -1. 포제션 개념(possession concept)
  &nbsp;  포제션은 소유라는 뜻으로 직역된다. 이 개념이 스포트에서는 볼을 소유한 시간, 다시 말해 공격할 기회를 의미하고 승패를 결정하는데 관련이 있는 변수 중 하나로 연구되고 있다. 경희대학교에서는 한국의 농구 기록 관련 연구에서 다뤄지지 않았던 포제션의 개념을 적용하여 한국남자프로농구의 승률을 예측하는 연구를 진행하였다. 한국남자프로농구 1997-1998시즌부터 2016-2017시즌의 자료를 대상으로 선정, 분석하여 1차 자료 수집으로 얻은 각 팀의 기록에 NBA에서 사용하는 포제션 산출 공식을 적용하여 팀별 포제션당 팀 평균기록을 산출하였다. 이러한 데이터를 바탕으로 상관분석, 다중회귀분석, Fisher의 Z 변환 및 단계적 다중회귀분석을 실시하여 포제션당 팀 평균기록은 경기당 팀 평균기록보다 팀 승률에 대한 설명력이 더 크다는 것과 포제션당 팀 평균기록으로 팀 승률을 예측했을 때, 수비 리바운드, 2점슛 성공률, 스틸, 3점슛 성공률, 자유투시도, 턴오버, 공격 리바운드, 블록슛, 자유투 성공률, 어시스트 순으로 영향을 미치는 것으로 나타났다는 유의미한 결과를 얻었다. 
+ 
+ ## -2. 회귀 분석
+ &nbsp; 랜덤 포레스트와 같은 회귀분석을 사용한 연구에 관련된 논문이 있어서 참고하였다. 이 논문에서는 변수간의 영향을 알아본 후에 개별 변수에 따른 단순회귀모형을 분석한다. 여기서 변수에 연봉이나 감독의 우승 횟수가 있다는 점이 놀라웠다. 선수의 기량은 평균 득점이나 스틸 횟수등으로 판단할 수 있다고 생각했기 때문이다. 이렇게 선수의 기량을 연봉으로 판단하면 가치가 확실하게 수치화 되어 변수로 사용하거나 판단하기는 쉽지만, 오히려 팀에 대한 호감도나 선호도 등 다양한 상관 관계가 작용할 수 있는 이적시장의 오차를 포함하지 못할 것이라 판단하였고, 실제로 연구 결과 또한 그런 양상을 보였다. 
 
 
 ## 참고자료
-https://www.kaggle.com/datasets/wyattowalsh/basketball
-https://www.boston.com/sports/boston-celtics/2023/05/20/celtics-heat-stats-odds-probability-espn-bpi-65-percent-game-2/?amp=1
-https://n.news.naver.com/sports/basketball/article/425/0000140467
-https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002330790
-https://m.riss.kr/search/detail/ssoSkipDetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=830f162886a6f9c7ffe0bdc3ef48d419
-
+https://www.kaggle.com/datasets/wyattowalsh/basketball (사용 데이터)
+https://www.boston.com/sports/boston-celtics/2023/05/20/celtics-heat-stats-odds-probability-espn-bpi-65-percent-game-2/?amp=1 (1, espn 관련 기사(1)) 
+https://n.news.naver.com/sports/basketball/article/425/0000140467 (1, espn 관련 기사(2))
+https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002330790 (4-1)
+https://m.riss.kr/search/detail/ssoSkipDetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=830f162886a6f9c7ffe0bdc3ef48d419 (4-1)
+http://www.happyhaksul.com/reports/216335 (4-2)
