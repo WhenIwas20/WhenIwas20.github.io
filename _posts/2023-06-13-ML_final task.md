@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "NBA 우승팀 분석"
+title:  "농구의표지표"
 categories: jupyter
 tag: [python, blog, jekyll]
 toc: true
