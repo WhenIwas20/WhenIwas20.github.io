@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "농구의표지표"
+title:  "농구 우승팀 "
 categories: jupyter
 tag: [python, blog, jekyll]
 toc: true
@@ -33,7 +33,9 @@ author_profile: false
 
 
 # 2. Datesets(nba 팀들의 승률 분석)
-###  사용한 분석 기법
+### 사용한 분석 기법
+
+### 다양한 변수들
 
 <head>
   <style>
