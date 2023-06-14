@@ -35,7 +35,7 @@ author_profile: false
 # 2. 데이터 셋들(nba 팀들의 승률 분석)
 
 ### 사용한 분석 기법
-NBA경기 데이터를 분석하기 위해 후보로 둔 모델은 로지스틱 회귀분석과, 서포트 벡터 머신(SVM), 랜덤 포레스트 입니다. 랜덤포레스트 모델은 여러 개의 분류기를 생성하고 , 이들의 예측을 종합하는 앙상블 학습 기법 중 하나입니다. 랜덤포레스트는 앙상블 학습의 세 종류중 데이터 샘플링을 통해 모델을 학습하고 결과를 집계하는 배깅(Bagging)방식으로 평균값 집계와 과적합 방지에 효과적입니다. NBA에는 경기분석을 위한 정말 다양한 데이터가 존재하기 때문에 팀의 우승 확률을 예측할 때의 각 변수 중요도 데이터를 얻을 수 있는 랜덤 포레스트 모델을 선택하였습니다.
+NBA경기 데이터를 분석하기 위해 후보로 둔 모델은 로지스틱 회귀분석과, 서포트 벡터 머신(SVM), 랜덤 포레스트이다. 랜덤포레스트 모델은 여러 개의 분류기를 생성하고 , 이들의 예측을 종합하는 앙상블 학습 기법 중 하나이다. 랜덤포레스트는 앙상블 학습의 세 종류중 데이터 샘플링을 통해 모델을 학습하고 결과를 집계하는 배깅(Bagging)방식으로 평균값 집계와 과적합 방지에 효과적이다. NBA에는 경기분석을 위한 정말 다양한 데이터가 존재하기 때문에 팀의 우승 확률을 예측할 때의 각 변수 중요도 데이터를 얻을 수 있는 랜덤 포레스트 모델을 선택하였다.
 ### 데이터셋과 라이브러리 불러오기
 NBA 경기 데이터는 kaggle 블로그를 통해 1940년 대부터 2023년 4월까지의 경기 데이터를 가져올 수 있었고 csv 머신러닝학습을 위해 numpy, sklearn 모듈 데이터 처리를 위해 pandas 모듈 등을 불러왔다.
 
@@ -178,7 +178,7 @@ Data columns (total 23 columns):
 dtypes: int64(16), object(7)
 memory usage: 991.1+ KB
 </pre>
-연속형 변수 16개 범주형 변수 7개인 것을 확인했습니다.
+연속형 변수 16개 범주형 변수 7개인 것을 확인했다.
 ```python
 df.describe().T
 ```
@@ -498,7 +498,7 @@ team_city_name_away       0
 team_nickname_away        0
 dtype: int64
 </pre>
-범주형변수에 결측치는 존재하지 않았습니다.
+범주형변수에 결측치는 존재하지 않았다.
 ```python
 numerical = [var for var in df.columns if df[var].dtype !='O']
 df[numerical].head()
@@ -666,13 +666,13 @@ pts_qtr2_away    0
 pts_qtr3_away    0
 dtype: int64
 </pre>
-데이터에 결측치가 존재하지 않아 추가적인 처리 없이 진행하였습니다.
+연속형변수에도 결측치는 없었고, 전체 데이터에 결측치가 없어 바로 모델 학습을 진행했다.
 
 
 
 ### 모델 학습 과정
-Jupyter Notebook을 통해 python 환경에서 RandomForest 모델을 학습했습니다.
-
+Jupyter Notebook을 통해 python 환경에서 RandomForest 모델을 학습했다.
+입력 변수(X)와 종속 변수(y)를 지정하고 sklearn 함수를 통해 train, test 데이터를 8:2로 나누었다.
 ```python
 #입력 변수(X)와 출력 변수(y)를 분리
 X = df[['3qtr_ptsgap','pts_home','pts_away','team_id_home','pts_qtr1_home','pts_qtr2_home','pts_qtr3_home','pts_qtr1_away','pts_qtr2_away','pts_qtr3_away']]
@@ -695,14 +695,15 @@ X_train.shape, X_test.shape
 <pre>
 ((4412, 10), (1103, 10))
 </pre>
-
+### 랜덤포레스트 모델 학습
+10개의 의사결정 트리를 사용하여 예측 모델의 정확도 점수를 계산하였다.
+정확도 점수(accuracy_score)는 올바르게 예측된 라벨의 비율을 테스트 데이터싯의 전체 샘플 수로 나눈 값으로 이를 통해 모델 학습이 정상적으로 작동하는지 검사했다
 ```python
-#랜덤포레스트 모델 학습
+
 from sklearn.ensemble import RandomForestClassifier
 rfc = RandomForestClassifier(random_state=0)
 rfc.fit(X_train, y_train)
 y_pred = rfc.predict(X_test)
-##10개의 의사결정 트리를 사용하여 예측하는 모델의 정확도 점수를 계산하고, 소수점 이하 4자리까지 출력한다. accuracy_score는 올바르게 예측된 라벨의 비율을 테스트 데이터싯의 전체 샘플 수로 나눈 값이다.
 from sklearn.metrics import accuracy_score
 print('Model accuracy score with 10 decision-trees : {0:0.4f}'. format(accuracy_score(y_test, y_pred)))
 ```
@@ -711,8 +712,8 @@ print('Model accuracy score with 10 decision-trees : {0:0.4f}'. format(accuracy_
 Model accuracy score with 10 decision-trees : 0.5286
 </pre>
 
+100개의 의사결정 트리를 지정하여 학습을 진행하였습니다.
 ```python
-#의사결정나무 100개 지정, 학습
 rfc_100 = RandomForestClassifier(n_estimators=100, random_state=0)
 rfc_100.fit(X_train, y_train)
 ```
@@ -748,7 +749,7 @@ print('Model accuracy score with 100 decision-trees : {0:0.4f}'. format(accuracy
 <pre>
 Model accuracy score with 100 decision-trees : 0.5286
 </pre>
-
+sklearn 모듈의 classification_report함수를 통해 학습 결과 지표를 나타냈다.
 ```python
 from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred_100))
