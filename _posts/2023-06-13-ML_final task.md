@@ -9,7 +9,7 @@ author_profile: false
 
 # 0. 사전 설명 
 ## -1. 유튜브 영상 
-이 블로그에 대한 내용이 설명된 유튜브 링크: 
+이 블로그에 대한 내용이 설명된 유튜브 링크: https://youtu.be/yTsl2v7sSOM
 
 ## -2. 멤버들 
 오준혁, 기계공학부, dhwnsgurm@naver.com \
